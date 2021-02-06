@@ -34,9 +34,6 @@ def index():
         task_content = request.form['content']#gets content input from the form
         new_task = Todo(content=task_content)
 
-        # for business in businesses:
-        #     print("Name:", business["name"])
-
         try:
             db.session.add(new_task)
             db.session.commit()
@@ -44,7 +41,7 @@ def index():
         except:
             return 'There was an error adding your task'
 
-    else:
+    else:#page refreshed/ reloaded so will output the template.
         tasks = Todo.query.order_by(Todo.date_created).all()#query database by date created
         return render_template('index.html', tasks=tasks)
 
@@ -63,7 +60,7 @@ def delete(id):
 def update(id):
     task = Todo.query.get_or_404(id)
     if request.method == 'POST':
-        task.content = request.form['content']
+        task.content = request.form['content']#get content from the search
 
         try:
             db.session.commit()
@@ -72,6 +69,10 @@ def update(id):
             return 'ERROR in update'
     else:
         return render_template('update.html', task=task)
+
+# @app.route('/search/<string:query>', methods=['GET', 'POST'])
+# def search(query):
+
 
 if __name__ == "__main__":
     app.run(debug=True)
