@@ -1,0 +1,42 @@
+.content{
+    text-align:center;
+    color: black;
+}
+
+table, td, tr{
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+button{
+    color: white;
+}
+
+.logoBackground{
+    background-image: url("https://media0.giphy.com/media/KfxPgR9Xb6lRvlFa8x/source.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 1px 1px #000000;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+
+  /* Set a specific height */
+  height: 40vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textMainPage{
+    background-color:#fdd521;
+    color: rgb(0, 0, 0);
+}
