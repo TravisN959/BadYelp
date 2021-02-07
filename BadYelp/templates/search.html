@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<Title>Bad Yelp</Title>
+{% endblock %}
+
+{% block body %}
+<div class="parallax1">{{searchLocation}}</div>
+<br>
+<div class="content">
+    <table>
+        {% for biz in businesses %}
+            <tr class="">
+                <td><img src="{{biz['image_url']}}" class="thumbnail"></td>
+                <td><h2>{{ biz["name"] }}</h2></td>
+                <td>{{ biz["rating"] }} / 5</td>
+                <td>{{ ', '.join( biz['location']["display_address"] ) }} </td>
+                <td>Walking Distance: {{ distances[biz["name"]] }} </td>
+            </tr>
+            
+        {% endfor %}   
+    </table>
+
+    
+</div>
+{% endblock %}

@@ -14,10 +14,10 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}">
     {% block head %}{% endblock %}
 </head>
-<body>
+<body class="pt-5 bg-light">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #cf0909;">
         <div class="logoBackground">
-            <a class="navbar-brand" href="#">Bad Yelp</a>
+            <a class="navbar-brand" href="/">Bad Yelp</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -44,52 +44,42 @@
               </div>
             </li> -->
           </ul>
-          <!-- <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Add Task">Search</button>
-          </form> -->
 
           <div class="form">
             <form class="form-inline my-2 my-lg-0" action="/" method="POST">
-                <input class="form-control mr-sm-2" type="text" name="content" id="content" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="text" name="location" id="location" placeholder="Location/Address" aria-label="Location">
+                <input class="form-control mr-sm-2" type="text" name="content" id="content" placeholder="Search" aria-label="Busienss Name">
                 <button class="btn my-2 my-sm-0"  type="submit" value="Add Task" style="background-color: #fdd521;">Search</button>
             </form>
           </div>
         </div>
       </nav>
     {% block body %}{% endblock %}
-    <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-          <!-- <div class="col-12 col-md">
-            <img class="mb-2" src="https://i.imgur.com/FW9cSFu.png" alt="" width="24" height="19">
-            <small class="d-block mb-3 text-muted">&copy; 2021</small>
-          </div> -->
-          <div class="col-6 col-md">
+    <div >
+      <h2 class="bg-light" style="text-align:center;">Feel free to explore these links!</h2>
+      <nav class="navbar navbar-expand-lg navbar-light bottom bg-light" >
+        <a class="navbar-brand" href="http://www.TravisLN.com">Who Made This?</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" >
+              <a class="nav-link" href="https://www.Yelp.com" style="color:#cf0909;"> Get Me To A Better Site <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color:#cf0909;"> Really Cool Video <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="https://partytimerental.com/wp-content/uploads/2018/03/Trash-Can.jpg" style="color:#cf0909;"> Submit a Complaint Here! <span class="sr-only">(current)</span></a>
+            </li>
             
-          </div>
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary" href="#">Cool stuff</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary" href="#">Resource</a></li>
-              
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="link-secondary" href="#">Team</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            
-            </div>
+          </ul>
+          <span class="navbar-text">
+            © 2020 Travis Nguyen
+          </span>
         </div>
-      </footer>
+      </nav>
+    </div>
 </body>
 </html>
